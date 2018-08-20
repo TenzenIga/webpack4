@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "homepage": "https://TenzenIga.github.io/webpack4",
   "scripts": {
+    "deploy": "gh-pages -d dist",
     "dev": "webpack-dev-server --mode development --open",
     "build": "webpack --mode production",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -28,5 +30,8 @@
     "webpack-cli": "^3.1.0",
     "webpack-dev-server": "^3.1.5",
     "webpack-md5-hash": "0.0.6"
+  },
+  "dependencies": {
+    "gh-pages": "^1.2.0"
   }
 }
