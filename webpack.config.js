@@ -23,7 +23,16 @@ module.exports = {
       {
         test: /\.scss$/,
         use:  [  'style-loader', MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
-      }
+      },
+      {
+         test: /\.(png|svg|jpg|gif)$/,
+         use: [
+           {
+             loader: 'file-loader'
+          }
+        ]
+       }
+
     ]
   },
   plugins: [
@@ -38,6 +47,24 @@ module.exports = {
       hash: true,
       template: './src/index.html',
       filename: 'index.html'
+    }),
+    new HtmlWebpackPlugin({
+      inject: false,
+      hash: true,
+      template: './src/about.html',
+      filename: 'about.html'
+    }),
+    new HtmlWebpackPlugin({
+      inject: false,
+      hash: true,
+      template: './src/work.html',
+      filename: 'work.html'
+    }),
+    new HtmlWebpackPlugin({
+      inject: false,
+      hash: true,
+      template: './src/contact.html',
+      filename: 'contact.html'
     }),
     new WebpackMd5Hash()
   ]
