@@ -127,6 +127,7 @@ min-height: calc(100vh - 60px);
 
 //Contact page
 .boxes{
+
   display: grid;
   align-items: center;
   grid-gap: 0.7rem;
@@ -134,12 +135,14 @@ min-height: calc(100vh - 60px);
   'box1 box2 box3';
   grid-template-columns: repeat(3, 1fr);
 
+  white-space: nowrap;
 
   div{
-    white-space: nowrap;
+
     font-size: 2rem;
     border: 3px #fff solid;
-    padding: 1.5rem 2.5rem;
+    padding: 20px;
+    text-align: center;
     margin-bottom: 3rem;
     @include easeOut;
     &:hover {
